@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/galeria.css">
+    <title>Galeria</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="galeria.html" class="activo">Galeria</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li style="float:right"><a class="active" href="#about">Usuario</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="cajaLogo">
+                <img src="src/banner.jpg" alt="Logo de la empresa" width="70%">
+            </div>
+
+            <div class="cajaPadre">
+                <div class="gallery">
+                    <a target="_blank" href="src/diagnosticoComputarizado.webp">
+                      <img src="src/diagnosticoComputarizado.webp" alt="Cinque Terre" width="800" height="400">
+                    </a>
+                    <div class="desc">
+                        Diagnostico computarizado multimarca
+                        No importa la procedencia de tu vehículo, igual lo diagnosticamos
+                        En TULIN MECÁNICA AUTOMOTRIZ tenemos la capacidad, el conocimiento y los equipos necesarios para diagnosticar: motor, caja automática, frenos ABS, bolsas de aire y sistema SRS, presión de neumáticos TPMS y muchos otros sistemas sin importar la marca de tu vehículo.</div>
+                </div>
+                  
+                <div class="gallery">
+                    <a target="_blank" href="src/mantenimiento.webp">
+                    <img src="src/mantenimiento.webp" alt="Forest" width="800" height="400">
+                    </a>
+                    <div class="desc">Nuestro servicio de mantenimiento trabaja en los sistemas eléctricos y luces, sistema de refrigeración, cambio de aceite  y demás fluidos, afinado de motores, sistema de frenos y frenos ABS, sistema de dirección y dirección asistida, sistema de suspensión y
+                        transmisión mecánica y automática. Entréguelo a los profesionales de TULIN MECÁNICA AUTOMOTRIZ hoy. Sabemos qué hacer.</div>
+                </div>
+                
+                <div class="gallery">
+                    <a target="_blank" href="src/reparacionMotores.webp">
+                    <img src="src/reparacionMotores.webp" alt="Northern Lights" width="800" height="400">
+                    </a>
+                    <div class="desc">Si es una persona ocupada, no permita que los problemas del auto se interpongan en su camino. TULIN MECÁNICA AUTOMOTRIZ tiene los equipos y la experiencia adecuada para encontrar, reparar o reemplazar las piezas problemáticas de forma rápida y eficaz. Llámenos hoy para que nos encarguemos de sus necesidades.</div>
+                </div>
+                
+                <div class="gallery">
+                    <a target="_blank" href="src/Chaperia.webp">
+                    <img src="src/Chaperia.webp" alt="Mountains" width="800" height="400">
+                    </a>
+                    <div class="desc">TULIN MECÁNICA AUTOMOTRIZ tiene la experiencia necesaria en chapería y pintura. Ofrecemos el servicio al cliente de mejor calidad y trataremos su automóvil como si fuera nuestro. Salga del taller con su vehículo como nuevo. Le sorprenderá la diferencia con nuestros servicios.</div>
+                </div>
+    
+                <div class="gallery">
+                    <a target="_blank" href="src/limpieza.webp">
+                    <img src="src/limpieza.webp" alt="Mountains" width="800" height="400">
+                    </a>
+                    <div class="desc">Nuestro servicio en limpieza de inyectores ultra sonido garantiza el buen funcionamiento de los inyectores. Esto se reflejara en un mejor funcionamiento del motor y menor consumo de combustible. En TULIN MECÁNICA AUTOMOTRIZ te entregaremos un informe del antes y del después de la limpieza ultrasonido de tus inyectores. Sabemos qué hacer.</div>
+                </div>
+                
+                <div class="gallery">
+                    <a target="_blank" href="src/Asesoramiento.webp">
+                    <img src="src/Asesoramiento.webp" alt="Mountains" width="800" height="400">
+                    </a>
+                    <div class="desc">Si quieres comprar un vehículo, lo más importante es que quieras cuidar tu inversión, no dudes en recurrir a nosotros para una revisión o diagnostico previo. TULIN MECÁNICA AUTOMOTRIZ tiene los equipos y la experiencia adecuada para ayudarte a tomar tan importante decisión. Llámenos hoy para que nos encarguemos de su diagnostico antes de tomar una decisión.</div>
+                </div>
+            </div>
+            
+        </section>
+        <aside>
+            <form action="">
+                <h1>Iniciar Session</h1>
+                <label for="nombre">Nombre usuario</label>
+                <input type="text" id="nombre"  placeholder="Nombre usuario..">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="Contraseña..">
+                <input type="button" value="Ingresar" id="myBtn">
+            </form>
+            <hr>
+            <div>
+                <h1>Servicios basicos</h1>
+                <ul>
+                    <li>Estética Automotriz</li>
+                    <li>Venta y montaje de llantas</li>
+                    <li>Electricidad Automotriz</li>
+                    <li>Escáner</li>
+                    <li>Hojalatería y Pintura Automotriz</li>
+                    <li>Mecánica</li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+            <form action="">
+                <h1>Conversor de Dolares a Bolivianos 1$ = 6.88Bs</h1>
+                <label for="inputDolar">Dolares</label>
+                <input type="number" id="inputDolar" placeholder="Dolares..">
+                <label for="inputBs">Bolivianos</label>
+                <input type="number" id="inputBs" placeholder="Bolivianos..">
+                <input type="button" value="Calcular" id="btnCalcular">
+            </form>            
+        </aside>
+        <div class="limpiarFloat"></div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="msjlogin">Respuesta</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        let nombre = document.getElementById("nombre").value;
+        let pass = document.getElementById("pass").value;
+        if(nombre == 'admin' && pass =='123456'){
+            document.getElementById("msjlogin").innerHTML = 'Exito, se ha registado al usuario correctamente!!!';
+        }else{
+            document.getElementById("msjlogin").innerHTML = 'Problema, el usuario no existe en la base de datos!!!';
+        }
+        modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var btnCalcular = document.getElementById("btnCalcular");
+    btnCalcular.onclick = function() {
+        let dolar = parseFloat(document.getElementById("inputDolar").value);
+        let boliviano = parseFloat(document.getElementById("inputBs").value);
+        let cambio = 0;
+        if(dolar == '' || dolar == '0' || isNaN(dolar)){
+            console.log(boliviano);
+            cambio = 0.1453 * boliviano;
+            // cons
+            document.getElementById("inputDolar").value = cambio;
+        }else{
+            cambio = 6.88 * dolar;
+            document.getElementById("inputBs").value = cambio;
+        }
+    }
+</script>
+</html>

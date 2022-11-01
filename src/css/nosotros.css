@@ -1,0 +1,182 @@
+* {
+    margin: 0px;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+nav > ul {
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #111;
+}
+
+section{
+    background-color: #AED6F1 ;
+    width: 70%;
+    float: left;
+}
+aside{
+    background-color: #f2f2f2;
+    width: 30%;
+    float: right;
+}
+
+#cajaLogo{
+    padding: 2rem;
+}
+#cajaLogo > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.descripcioUno{
+    float: left;
+    width: 65%;
+    padding: 1rem;
+}
+.cajaIImagenUno{
+    float: right;
+    width: 35%;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
+.limpiarFloat{
+    clear: both;
+}
+
+.cajaIImagenDos{
+    float: left;
+    width: 35%;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
+.descripcioDos{
+    float: right;
+    width: 65%;
+    padding: 1rem;
+}
+p{
+    padding: 0.5rem;
+    text-align: justify;
+}
+
+form{
+    margin-top: 10%;
+    padding: 1rem;
+}
+aside h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.activo{
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    #cajaLogo img{
+        width: 100%;
+    }
+
+    #descripcioUno {
+        width: 100%;
+    }
+    #cajaIImagenUno { 
+        width: 100%;
+        /* float: right; */
+    }
+    #descripcioDos {
+        width: 100%;
+    }
+    #cajaIImagenDos { 
+        width: 100%;
+        /* float: right; */
+    }
+
+    section {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}

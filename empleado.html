@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <title>Taller mecanico</title>
+    <style>
+        .modal {
+            left: 0;
+            right: 0;
+            background-color: #fafafa;
+            padding: 0;
+            max-height: 85%;
+            /* width: 35%; */
+            will-change: top, opacity;
+        }
+        strong {
+            font-weight: 500;
+        }
+
+        b, strong {
+            font-weight: bolder; 
+        }
+        body{
+            background-color: #AED6F1 ;
+        }
+        main{
+            background-color: #f2f2f2;
+            padding: .9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper grey darken-3">
+            <a href="#!" class="brand-logo">&nbsp &nbsp Mecanica Tulin <i class='material-icons right'>settings</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <!-- <li><a href="publicacion.html">Publicacion</a></li>  -->
+            <li><a href="#" id="btnEliminarSesion"><i class="material-icons left">power_settings_new</i> Salir</a></li> 
+            <li><a href="cliente.html"><i class="material-icons left">person</i> Cliente</a></li>
+            <li><a class="green" href="empleado.html"><i class="material-icons left">people</i> Empleado</a></li>
+            <li><a href="reparacion.html"><i class="material-icons left">build</i> Reparacion</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <ul class="sidenav" id="mobile-demo">
+        <!-- <li><a href="publicacion.html">Publicacion</a></li> -->
+        <li><a href="index.html"><i class="material-icons left">power_settings_new</i> Salir</a></li> 
+        <li><a href="cliente.html"><i class="material-icons left">person</i> Cliente</a></li>
+        <li><a class="green" href="empleado.html"><i class="material-icons left">people</i> Empleado</a></li>  
+        <li><a href="reparacion.html"><i class="material-icons left">build</i> Reparacion</a></li>
+    </ul>
+    <main class='container'>
+        <div class="center-align"><h2 class="blue-text text-darken-2">lista de Empleados</h2></div>
+        
+        <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+        <button data-target="modal1" class="btn modal-trigger btn waves-effect waves-light" type="button">
+            Agregar
+            <i class="material-icons right">add</i>
+        </button>
+        <table id="tablaEmpleados" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>nombre</th>
+                    <th>celular</th>
+                    <th>usuario</th>
+                    <th>Foto</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>nombre</th>
+                    <th>celular</th>
+                    <th>usuario</th>
+                    <th>Foto</th>
+                    <th>Opciones</th>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <!-- MODALES  -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4 class="center-align">Agregar Empleado</h4>
+            <!-- <p>A bunch of text</p> -->
+            <form id="addFormEmpleado">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Nombre" id="addNombreEmpleado" type="text" class="validate" required>
+                        <label for="addNombreEmpleados">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Celular" id="addCelEmpleado" type="text" class="validate" required>
+                        <label for="addCelEmpleados">Celular</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Usuario" id="addUsuarioEmpleado" type="email" class="validate" required>
+                        <label for="addUsuarioEmpleados">Usuario</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Password" id="addPasswordEmpleado" type="password" class="validate" required>
+                        <label for="addPasswordEmpleados">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <select class="icons" required id="foto">
+                          <option value="" disabled selected>Escoja una foto</option>
+                          <option value="img/perfil/3s530467235.jpg" data-icon="img/perfil/3s530467235.jpg">Option 1</option>
+                          <option value="img/perfil/351192d75.jpg" data-icon="img/perfil/351192d75.jpg">Option 2</option>
+                          <option value="img/perfil/351192sdgd7sf5.jpg" data-icon="img/perfil/351192sdgd7sf5.jpg">Option 3</option>
+                          <option value="img/perfil/351192sdgd75.jpg" data-icon="img/perfil/351192sdgd75.jpg">Option 4</option>
+                          <option value="img/perfil/3530467.jpg" data-icon="img/perfil/3530467.jpg">Option 5</option>
+                          <option value="img/perfil/35119275.jpg" data-icon="img/perfil/35119275.jpg">Option 6</option>
+                          <option value="img/perfil/35304672.jpg" data-icon="img/perfil/35304672.jpg">Option 8</option>
+                          <option value="img/perfil/353046723.jpg" data-icon="img/perfil/353046723.jpg">Option 9</option>
+                          <option value="img/perfil/3530467234.jpg" data-icon="img/perfil/3530467234.jpg">Option 10</option>
+                          <option value="img/perfil/3530467235.jpg" data-icon="img/perfil/3530467235.jpg">Option 11</option>
+                          <option value="img/perfil/35304672346.jpg" data-icon="img/perfil/35304672346.jpg">Option 12</option>
+                          <option value="img/perfil/35304672347.jpg" data-icon="img/perfil/35304672347.jpg">Option 13</option>
+                        </select>
+                        <label>Materialize Select</label>
+                    </div>
+                    <div class="preview">
+                        <img id="addImagenUsuario" src="img/perfil/perfil.jpg" width="40%">
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button type="submit" class="waves-effect waves-green btn-flat green lighten-1"> Agregar</button>
+                    <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat green">Salir</a> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODALES  -->
+    <div id="modal2" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4 class="center-align">Eliminar Empleado</h4>
+            <!-- <p>A bunch of text</p> -->
+            <form id="delFormEmpleado">
+                <p>Usted esta de acuerdo con elimnar al Empleados <strong id="delNomEmpleado"></strong></p>
+                <span id="delIDEmpleado" class="hide"></span>
+                <br>
+                <div class="center-align">
+                    <button type="submit" class="waves-effect waves-red btn-flat red lighten-1"> Eliminar</button>
+                    <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat green">Salir</a> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODALES  -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h4 class="center-align">Editar Empleados</h4>
+            <!-- <p>A bunch of text</p> -->
+            <form id="editFormEmpleado">
+                <span class="hide" id="editIDEmpleado"></span>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Nombre" id="editNombreEmpleado" type="text" class="validate" required>
+                        <label for="editNombreEmpleado">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Celular" id="editCelEmpleado" type="text" class="validate" required>
+                        <label for="editCelEmpleado">Celular</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Usuario" id="editUsuarioEmpleado" type="email" class="validate" required>
+                        <label for="editUsuarioEmpleado">Usuario</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Password" id="editPasswordEmpleado" type="password" class="validate" required>
+                        <label for="editPasswordEmpleado">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <select class="icons" required id="editFoto">
+                          <option value="" disabled>Escoja una foto</option>
+                          <option value="img/perfil/3s530467235.jpg" data-icon="img/perfil/3s530467235.jpg">Option 1</option>
+                          <option value="img/perfil/351192d75.jpg" data-icon="img/perfil/351192d75.jpg">Option 2</option>
+                          <option value="img/perfil/351192sdgd7sf5.jpg" data-icon="img/perfil/351192sdgd7sf5.jpg">Option 3</option>
+                          <option value="img/perfil/351192sdgd75.jpg" data-icon="img/perfil/351192sdgd75.jpg">Option 4</option>
+                          <option value="img/perfil/3530467.jpg" data-icon="img/perfil/3530467.jpg">Option 5</option>
+                          <option value="img/perfil/35119275.jpg" data-icon="img/perfil/35119275.jpg">Option 6</option>
+                          <option value="img/perfil/35304672.jpg" data-icon="img/perfil/35304672.jpg">Option 8</option>
+                          <option value="img/perfil/353046723.jpg" data-icon="img/perfil/353046723.jpg">Option 9</option>
+                          <option value="img/perfil/3530467234.jpg" data-icon="img/perfil/3530467234.jpg">Option 10</option>
+                          <option value="img/perfil/3530467235.jpg" data-icon="img/perfil/3530467235.jpg">Option 11</option>
+                          <option value="img/perfil/35304672346.jpg" data-icon="img/perfil/35304672346.jpg">Option 12</option>
+                          <option value="img/perfil/35304672347.jpg" data-icon="img/perfil/35304672347.jpg">Option 13</option>
+                        </select>
+                        <label>Seleccione usuario</label>
+                    </div>
+                    <div class="preview">
+                        <img id="editImagenUsuario" src="img/perfil/perfil.jpg" width="40%">
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button type="submit" class="waves-effect waves-blue btn-flat blue lighten-1"> Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/empleado.js"></script>
+</html>

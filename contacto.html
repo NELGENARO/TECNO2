@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        /* * { box-sizing: border-box; -webkit-box-sizing: border-box; } */
+        * {
+            margin: 0px;
+            font-family: GillSans, Calibri, Trebuchet, sans-serif;
+            box-sizing: border-box; -webkit-box-sizing: border-box;
+        }
+        nav > ul {
+            font-size: 18px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 18px;
+            text-decoration: none;
+        }
+
+        nav li:hover {
+            background-color: #111;
+        }
+
+        section{
+            background-color: #AED6F1 ;
+            width: 70%;
+            float: left;
+        }
+        aside{
+            background-color: #f2f2f2;
+            width: 30%;
+            float: right;
+        }
+        #enviarCorreo form{
+            background-color: #f2f2f2;
+        }
+
+        #cajaLogo{
+            padding: 2rem;
+        }
+        #cajaLogo > img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        #descripcioUno{
+            float: left;
+            width: 35%;
+            padding: 2rem;
+            font-size: 16px;
+        }
+        #cajaIImagenUno{
+            float: right;
+            width: 65%;
+            padding: 1rem;
+        }
+
+        .limpiarFloat{
+            clear: both;
+        }
+
+        #cajaIImagenDos{
+            float: left;
+            width: 50%;
+            padding: 1rem;
+            background-color: aliceblue;
+        }
+
+        #descripcioDos{
+            float: right;
+            width: 50%;
+            padding: 1rem;
+        }
+
+        #enviarCorreo{
+            margin: auto;
+            width: 50%;
+            width: 60%;
+            border: #333 solid 3px;
+            border-radius: 2px;
+        }
+
+        #enviarCorreo  form{
+            margin-top: 0px;
+            /* text-align: center; */
+        }
+
+        #enviarCorreo  h1{
+            text-align: center;
+        }
+
+        p{
+            padding: 0.5rem;
+            text-align: justify;
+        }
+        form{
+            margin-top: 10%;
+            padding: 1rem;
+        }
+        aside h1 {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=button] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover {
+            background-color: #45a049;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; 
+                padding: 20px;
+                border: 1px solid #888;
+                width: 50%; 
+            }
+
+            .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .activo{
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            #cajaLogo img{
+                width: 100%;
+            }
+
+            #descripcioUno {
+                width: 100%;
+            }
+            #cajaIImagenUno { 
+                width: 100%;
+                /* float: right; */
+            }
+            #descripcioDos {
+                width: 100%;
+            }
+            #cajaIImagenDos { 
+                width: 100%;
+                /* float: right; */
+            }
+
+            section {
+                width: 100%;
+            }
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+                <li style="float:right"><a class="active" href="#about">Usuario</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="cajaLogo">
+                <img src="src/banner.jpg" alt="Logo de la empresa" width="70%">
+            </div>
+            <div id="enviarCorreo">
+                <form action="">
+                    <h1>Enviar Correo</h1>
+                    <br>
+                    <label for="inputDolar">Correo remitente</label>
+                    <input type="text" id="inputCorreo" placeholder="Correo remitente..">
+                    <label for="inputBs">Titulo o asunto</label>
+                    <input type="text" id="inputTitulo" placeholder="Titulo o asunto..">
+                    <label for="descripcionMail">Descripcion</label>
+                    <input type="text" id="inputDescripcion" placeholder="Descripcion..">
+                    <input type="button" value="Enviar" id="btnEnviarCorreo">
+                </form>  
+            </div>
+            <div>
+                <div id="descripcioUno">
+                    <h2>Contacto</h2>
+                    <div class="row px-2">
+                        Ubicación: Avenida Uyuni No. 1525
+                    </div>
+                    <div class="row px-2">
+                        Contactos WhatsApp: 69416450 - 76401891
+                    </div>
+                    <div class="row px-2">
+                        Correo: MotorMec@motor.com.bo
+                    </div>
+                    <div class="row px-2">
+                        Visitanos en los siguientes horarios
+                    </div>
+                    <div class="row px-2">
+                        Lunes - Viernes: 8:30 a. m. - 18:30 p. m.
+                    </div>
+                    <div class="row px-2">
+                        Sábado: 8:30 a. m. - 12:30 p. m.
+                    </div>
+                    <div class="row px-2">
+                        Domingo: cerrado
+                    </div>
+                </div>
+                <div id="cajaIImagenUno">
+                    <img src="src/direccion.png" alt="Labado de la empresa" width="100%">
+                    <!-- <iframe src="src/di"></iframe> -->
+                </div>
+            </div>
+            <div class="limpiarFloat"></div>
+        </section>
+        <aside>
+            <form action="">
+                <h1>Iniciar Session</h1>
+                <label for="nombre">Nombre usuario</label>
+                <input type="text" id="nombre"  placeholder="Nombre usuario..">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="Contraseña..">
+                <input type="button" value="Ingresar" id="myBtn">
+            </form>
+            <hr>
+            <div>
+                <h1>Servicios basicos</h1>
+                <ul>
+                    <li>Estética Automotriz</li>
+                    <li>Venta y montaje de llantas</li>
+                    <li>Electricidad Automotriz</li>
+                    <li>Escáner</li>
+                    <li>Hojalatería y Pintura Automotriz</li>
+                    <li>Mecánica</li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+            <form action="">
+                <h1>Conversor de Dolares a Bolivianos 1$ = 6.88Bs</h1>
+                <label for="inputDolar">Dolares</label>
+                <input type="number" id="inputDolar" placeholder="Dolares..">
+                <label for="inputBs">Bolivianos</label>
+                <input type="number" id="inputBs" placeholder="Bolivianos..">
+                <input type="button" value="Calcular" id="btnCalcular">
+            </form>            
+        </aside>
+        <div class="limpiarFloat"></div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="msjlogin">Respuesta</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        let nombre = document.getElementById("nombre").value;
+        let pass = document.getElementById("pass").value;
+        if(nombre == 'admin' && pass =='123456'){
+            document.getElementById("msjlogin").innerHTML = 'Exito, se ha registado al usuario correctamente!!!';
+        }else{
+            document.getElementById("msjlogin").innerHTML = 'Problema, el usuario no existe en la base de datos!!!';
+        }
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    let btnEnviarCorreo = document.getElementById("btnEnviarCorreo");
+    btnEnviarCorreo.onclick = function(){
+        let descripcion = document.getElementById("inputDescripcion").value;
+        let titulo = document.getElementById("inputTitulo").value;
+        let correo = document.getElementById("inputCorreo").value;
+        alert('Se ha enviado un correo a nombre de '+correo+' con el siguiente titulo '+titulo);
+    }
+
+    var btnCalcular = document.getElementById("btnCalcular");
+    btnCalcular.onclick = function() {
+        let dolar = parseFloat(document.getElementById("inputDolar").value);
+        let boliviano = parseFloat(document.getElementById("inputBs").value);
+        let cambio = 0;
+        if(dolar == '' || dolar == '0' || isNaN(dolar)){
+            console.log(boliviano);
+            cambio = 0.1453 * boliviano;
+            document.getElementById("inputDolar").value = cambio;
+        }else{
+            cambio = 6.88 * dolar;
+            document.getElementById("inputBs").value = cambio;
+        }
+    }
+</script>
+</html>

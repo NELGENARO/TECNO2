@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* * { box-sizing: border-box; -webkit-box-sizing: border-box; } */
+        * {
+            margin: 0px;
+            font-family: GillSans, Calibri, Trebuchet, sans-serif;
+            box-sizing: border-box; -webkit-box-sizing: border-box;
+        }
+        body{
+            background-color: #AED6F1;
+        }
+        nav > ul {
+            font-size: 18px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 18px;
+            text-decoration: none;
+        }
+
+        nav li:hover {
+            background-color: #111;
+        }
+
+        section{
+            background-color: #AED6F1 ;
+            width: 70%;
+            float: left;
+        }
+        aside{
+            background-color: #f2f2f2;
+            width: 30%;
+            float: right;
+        }
+
+        #cajaLogo{
+            padding: 2rem;
+        }
+        #cajaLogo > img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* width: 50%; */
+            width: 100%;
+        }
+        #descripcioUno{
+            float: left;
+            width: 65%;
+            padding: 1rem;
+        }
+        #cajaIImagenUno{
+            float: right;
+            width: 35%;
+            padding: 1rem;
+            background-color: aliceblue;
+        }
+
+        .limpiarFloat{
+            clear: both;
+        }
+
+        #cajaIImagenDos{
+            float: left;
+            width: 35%;
+            padding: 1rem;
+            background-color: aliceblue;
+        }
+
+        #descripcioDos{
+            float: right;
+            width: 65%;
+            padding: 1rem;
+        }
+        p{
+            padding: 0.5rem;
+            text-align: justify;
+        }
+
+        form{
+            margin-top: 10%;
+            padding: 1rem;
+        }
+        aside h1 {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        input{
+            width: 100%;
+            font-size: 18px;
+            padding: 14px 22px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=button] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover {
+            background-color: #45a049;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; 
+                padding: 20px;
+                border: 1px solid #888;
+                width: 50%; 
+            }
+
+            .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .activo{
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            #cajaLogo img{
+                width: 100%;
+            }
+
+            #descripcioUno {
+                width: 100%;
+            }
+            #cajaIImagenUno { 
+                width: 100%;
+                /* float: right; */
+            }
+            #descripcioDos {
+                width: 100%;
+            }
+            #cajaIImagenDos { 
+                width: 100%;
+                /* float: right; */
+            }
+
+            section {
+                width: 100%;
+            }
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li style="float:right"><a class="active" href="#about">Usuario</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="cajaLogo">
+                <img src="src/banner.jpg" alt="Logo de la empresa" width="100%">
+            </div>
+            <div>
+                <div id="descripcioUno">
+                    <p>Contamos con un servicio de mantenimiento preventivo para los vehículos y para ello contamos con carburantes a elección del asociado y clientes en general.</p>
+                    <p>Brindamos un servicio de revisión y cambio y/o mantenimiento del sistema de frenos.</p>
+                    <p>Al mismo tiempo de manera intermitente hemos estado prestando “un servicio de lavado rápido” de los días Sábados por la tarde y Domingos por la mañana, así como el servicio de llantería; servicios que pretendemos formalizar de manera permanente en fines de semana.</p>
+                    <p>Próximamente estamos inaugurando una oficina confortable donde el asociado que pase por la estación de servicio tenga un espacio de espera acorde y confortable.</p>
+                    <p>Queda Pendiente reactivar en forma inmediata el servicio de alineación y balanceo, equipo de desenllantado y servicio de llantería en general</p>
+                </div>
+                <div id="cajaIImagenUno">
+                    <img src="src/lavado.jpg" alt="Labado de la empresa" width="100%">
+                </div>
+            </div>
+            <div class="limpiarFloat"></div>
+            <hr>
+            <div>
+                <div id="cajaIImagenDos">
+                    <img src="src/servicio.jpeg" alt="Labado de la empresa" width="100%">
+                </div>
+                <div id="descripcioDos">
+                    <p>También se tiene planificado adquirir maquinas para cambios de aceite a cajas automáticas de acuerdo a la tecnología actual.</p>
+                    <p>Estimamos trabajando para que paralelamente a la apertura de la Escuela de conducción en San Jorge, también se implementaran los servicios antes mencionados es decir el de lavado rápido y llantería, mismo que estará a disposición de toda nuestra masa societaria y público en general.</p>
+                    <p>Con todas estas mejoras y con su preferencia, estamos seguros de convertir esta en una Unidad de negocios y servicio productiva.
+                    El beneficio para los socios</p>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <form action="" id="formAcceso">
+                <h1>Iniciar Session</h1>
+                <label for="nombre">Nombre usuario</label>
+                <input type="text" id="nombre"  placeholder="Nombre usuario..">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="Contraseña..">
+                <input type="button" value="Ingresar" id="myBtn">
+            </form>
+            <hr>
+            <div>
+                <h1>Servicios basicos</h1>
+                <ul>
+                    <li>Estética Automotriz</li>
+                    <li>Venta y montaje de llantas</li>
+                    <li>Electricidad Automotriz</li>
+                    <li>Escáner</li>
+                    <li>Hojalatería y Pintura Automotriz</li>
+                    <li>Mecánica</li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+            <form action="">
+                <h1>Conversor de Dolares a Bolivianos 1$ = 6.88Bs</h1>
+                <label for="inputDolar">Dolares</label>
+                <input type="number" id="inputDolar" placeholder="Dolares..">
+                <label for="inputBs">Bolivianos</label>
+                <input type="number" id="inputBs" placeholder="Bolivianos..">
+                <input type="button" value="Calcular" id="btnCalcular">
+            </form>            
+        </aside>
+        <div class="limpiarFloat"></div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="msjlogin">Respuesta</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    let queryString = window.location.search;
+    let urlParams = new URLSearchParams(queryString);
+    let error = urlParams.get('error');
+    if(error == 'acceso'){
+        Swal.fire('Error!!','El usuario no cuenta con las permisos','error');
+    }
+    // console.log(urlParams.get('error'));
+    // Get the modal
+    listaEmpleados = [];
+    existeEmpleadosLocalStorage();
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        let nombre = document.getElementById("nombre").value;
+        let pass = document.getElementById("pass").value;
+        listaEmpleados = JSON.parse(localStorage.getItem('Empleados'));
+        let i;
+        for (i = 0; i < listaEmpleados.length; i++) {
+            let element = listaEmpleados[i];
+            // console.log(element);
+            if(nombre.trim() == element.usuario.trim() && pass.trim() == element.pass.trim()){
+                localStorage.setItem('usuario',JSON.stringify('hola'));
+                // console.log('aqui');
+                // localStorage.getItem('usuario');
+                // console.log('aqui');
+                Swal.fire('Exito!!', 'Se ha iniciado session', 'success');
+                
+                window.location.href = "cliente.html";
+                break;
+                // setTimeout( function() { window.location.href = "empleado.html"; }, 2000 );
+            }
+        }
+        if(i>=listaEmpleados.length){
+            Swal.fire('Problema!!', 'No coinciden usuario y/o contraseña', 'error');
+        }
+
+        // if(nombre == 'admin' && pass =='123456'){
+        //     document.getElementById("msjlogin").innerHTML = 'Exito, se ha registado al usuario correctamente!!!';
+        // }else{
+        //     document.getElementById("msjlogin").innerHTML = 'Problema, el usuario no existe en la base de datos!!!';
+        // }
+        // modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var btnCalcular = document.getElementById("btnCalcular");
+    btnCalcular.onclick = function() {
+        let dolar = parseFloat(document.getElementById("inputDolar").value);
+        let boliviano = parseFloat(document.getElementById("inputBs").value);
+        let cambio = 0;
+        if(dolar == '' || dolar == '0' || isNaN(dolar)){
+            console.log(boliviano);
+            cambio = 0.1453 * boliviano;
+            // cons
+            document.getElementById("inputDolar").value = cambio;
+        }else{
+            cambio = 6.88 * dolar;
+            document.getElementById("inputBs").value = cambio;
+        }
+    }
+
+function existeEmpleadosLocalStorage(){
+    if(localStorage.hasOwnProperty("Empleados")){
+        listaEmpleados = JSON.parse(localStorage.getItem('Empleados'));
+    }else{
+        listaEmpleados = [{id_empleado:1 ,nombre:'juan Jose Torrez',celular:'77822445',usuario:'admin@gmail.com',pass: 'querty', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:2 ,nombre:'Miguel Perez Mamani',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:3 ,nombre:'Daniel Quispe Acha',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:4 ,nombre:'Ana Rodiguez Vejaz',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:5 ,nombre:'Oscar Varga Teran',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:6 ,nombre:'Rosimar Panozo Toledo',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:7 ,nombre:'Juan Villca Rios',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'},
+        {id_empleado:8 ,nombre:'Mateo Andrade Merida',celular:'77822445',usuario:'ejemploEmpleado@gmail.com',pass: '123456', foto: 'img/perfil/3530467234.jpg'}
+        ];
+        localStorage.setItem('Empleados',JSON.stringify(listaEmpleados));
+    }
+}
+</script>
+</html>

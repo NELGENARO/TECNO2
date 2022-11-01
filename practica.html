@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practica 7</title>
+    <style>
+        *{
+            background-color: #37474F;
+            color: whitesmoke;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, Courier, monospace;
+        }
+        
+        h2{
+            background-color: #45a049;
+        }
+        #cabecera h2 a{
+            background-color: #45a049;
+        }
+        #cabecera h2 i{
+            background-color: #45a049;
+        }
+        /* HEADER */
+        .element_header{
+            text-align: center;
+            margin: 2px;
+            width: 10%;
+            height: 10vh;
+        }
+        .cabecera_izq{
+            float: left;
+            background-color: #45a049;
+            border-radius: 7px;
+        }
+        .cabecera_der{
+            float: right;
+            background-color: #45a049;
+            border-radius: 7px;
+        }
+
+        /* INICIO */
+        #inicio{
+            /* border: 3px solid #45a049; */
+            clear: both;
+            /* height: 21.5vh; */
+            min-height: 25.5vh;
+            text-align: justify;
+            font-size: 19px;
+        }
+
+        .text_inicio_izq{
+            float: left;
+            text-align: center;
+            margin: 2px;
+            width: 49%;
+            height: 15vh;
+        }
+
+        .inicio_izq{
+            float: left;
+            background-color: #45a049;
+            /* border: 2px solid rgb(191, 10, 207); */
+            order: 2px solid darkgreen;
+            text-align: center;
+            margin: 2px;
+            width: 49%;
+            height: 5vh;
+        }
+        .inicio_der{
+            float: right;
+            text-align: center;
+            margin: 5px;
+            width: 49%;
+            height: 20vh;
+        }
+
+        /* SECCION 1 */
+        #seccion_1{
+            clear: both;
+            text-align: justify;
+            font-size: 19px;
+            height: 21.5vh;
+            margin-top: 15px;
+        }
+
+        .text_seccion1_izq{
+            float: left;
+            text-align: center;
+            margin: 2px;
+            width: 49%;
+            height: 10vh;
+        }
+
+        .seccion1_izq{
+            float: left;
+            text-align: justify;
+            margin-top: 10px;
+            width: 49%;
+            height: 10vh;
+            font-family: Arial;
+            color: #45a049;
+        }
+        .seccion1_der{
+            float: right;
+            /* border: 2px solid rgb(238, 9, 226); */
+            /* background-color: darkgreen; */
+            order: 2px solid darkgreen;
+            text-align: center;
+            margin: 2px;
+            width: 49%;
+            height: 20vh;
+        }
+
+        /* SECCION 2 */
+        #seccion_2{
+            clear: both;
+            height: 15vh;
+            margin-top: 15px;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+        .element_seccion2{
+            margin: 2px;
+            width: 24.5%;
+            height: 15vh;
+        }
+        .seccion2_izq{
+            float: left;
+        }
+        .seccion2_der{
+            float: right;
+        }
+
+        /* footer */
+        #footer{
+            clear: both;
+            margin-top: 15px;
+        }
+
+        .footer_izq{
+            float: left;
+            text-align: justify;
+            /* margin-top: px; */
+            /* margin-bottom: 20px; */
+            margin-left: 20px;
+            width: 49%;
+            height: 25vh;
+        }
+        .footer_der{
+            float: right;
+            text-align: justify;
+            margin-top: 10px;
+            width: 49%;
+            height: 10vh;
+            font-family: Arial;
+        }
+        #cabecera{
+            background-color: #45a049;
+        }
+        .limpiar{
+            clear: both;
+        }
+    </style>
+    <style>
+        /* * {box-sizing:border-box} */
+
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            }
+
+            /* Hide the images by default */
+            .mySlides {
+            display: none;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+            background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <!-- CABECERA -->
+        <div id="cabecera">
+            <div  class="element_header cabecera_izq" >
+                <img center src="src/WEBER-logo.webp"  style="width: 100%;height: 100%;">
+            </div>
+            <div class="element_header cabecera_der">
+                <h2><a href="#">Inicio</a> <br><i class="fa fa-home"></i></h2>
+            </div>
+            <div class="element_header cabecera_der">
+                <h2><a href="#">Informacion</a> <br><i class="fa fa-info"></i></h2>
+            </div>
+            <div class="element_header cabecera_der">
+                <h2><a href="#">Servicios</a> <br><i class="fa fa-wrench"></i></h2>
+            </div>
+            <div class="element_header cabecera_der">
+                <h2><a href="#">Contactos</a> <br><i class="fa fa-vcard-o"></i></h2>
+            </div>
+        </div>
+        
+        <div class="limpiar"></div>
+        <!-- INICIO -->
+        <div id="inicio">
+            <div class="text_inicio_izq">
+                <br>
+                WEBER MECÁNICA AUTOMOTRIZ es un taller de servicio profesional e integral en reparación de autos. Ofrecemos diversos servicios de reparación mecánica y de carrocería, así como mantenimiento para que su vehículo se conserve en buen estado. Estamos comprometidos con la satisfacción de nuestros clientes. Nuestros mecánicos están capacitados para ayudarle a resolver cualquier falla en su auto, para que usted pueda continuar el camino.
+            </div>
+            <div class="inicio_der">
+                <img center src="src/Asesoramiento.webp" style="width:80%;stroke-width: 3; height:25vh;" preserveAspectRatio="none" width="400" height="400" fill="transparent" stroke="currentColor">
+            </div>
+            <div class="limpiar"></div>
+            <div class="inicio_izq">Ver mas</div>
+        </div>
+        <br>
+        <div class="limpiar"></div>
+        <hr>
+        <br>
+        <!-- SECCION 1 -->
+        <div id="seccion_1">
+            <div class="text_seccion1_izq">
+                <br>
+                La Universidad Autónoma “Tomás Frías” o simplemente UATF, es una institución de educación superior ubicada en la ciudad de Potosí, capital del Departamento de Potosí, se fundó por Ley del 15 de octubre de 1892. Se trata de una entidad pública. En 2017, según el ranking webometrics, es considerada la octava mejor universidad de Bolivia.
+            </div>
+            <div class="seccion1_der">
+                <img center src="src/conozca.webp" style="width:80%; height:26vh;stroke-width: 3;" preserveAspectRatio="none" width="400" height="400" fill="transparent" stroke="currentColor">                    
+            </div>
+            <div class="limpiar"></div>
+            <div class="seccion1_izq">
+                <br>
+                <a href="https://weberbs.wixsite.com/website">Pagina Oficial</a>
+            </div>
+        </div>
+        <div class="limpiar"></div>
+        <hr>
+        <!-- SECCION 2 -->
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="src/lavado.jpg" style="width:100%">
+            <!-- <div class="text">Lavado</div> -->
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="src/mecanicos.jpg" style="width:100%">
+            <!-- <div class="text">Nosostros</div> -->
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="src/limpieza.webp" style="width:100%">
+            <!-- <div class="text">Limpieza</div> -->
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <div class="footer_izq">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12807.713804295758!2d-66.14294054297238!3d-17.37546562191324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeec53f8cbc955985!2sSoccer%20Club!5e0!3m2!1sen!2sbo!4v1659403541154!5m2!1sen!2sbo" width="95%" height="350" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <br><br><br>
+                <img center src="dere3.jpg" svg style="width:100%; height:10vh;stroke-width: 1.5;" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M7 4v16l13 -8z"></path>
+                </svg> -->
+                <br>
+                <br>
+                <hr>
+            </div>
+            <div class="footer_der">
+                <!-- Carreras -->
+
+                <h3>Contacto</h3>
+                    <div class="row px-2">
+                        Ubicación: Avenida Uyuni No. 1525
+                    </div>
+                    <div class="row px-2">
+                        Contactos WhatsApp: 69416450 - 76401891
+                    </div>
+                    <div class="row px-2">
+                        Correo: MotorMec@motor.com.bo
+                    </div>
+                    <div class="row px-2">
+                        Visitanos en los siguientes horarios
+                    </div>
+                    <div class="row px-2">
+                        Lunes - Viernes: 8:30 a. m. - 18:30 p. m.
+                    </div>
+                    <div class="row px-2">
+                        Sábado: 8:30 a. m. - 12:30 p. m.
+                    </div>
+                    <div class="row px-2">
+                        Domingo: cerrado
+                    </div>
+                <b>Estudiante:</b> <span style="font-size: 20px">Nelson</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+</html>
